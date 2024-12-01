@@ -54,12 +54,12 @@ This project follows the MVC (Model-View-Controller) pattern:
 
 1. Clone the repository
    ```bash
-   git clone [repository-url]
+   git clone [https://github.com/Khadalicioso/login_system.git]
    ```
 
 2. Navigate to the project directory
    ```bash
-   cd Practical__Login
+   cd login_system
    ```
 
 3. Restore dependencies
