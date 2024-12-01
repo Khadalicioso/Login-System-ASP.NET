@@ -54,7 +54,7 @@ This project follows the MVC (Model-View-Controller) pattern:
 
 1. Clone the repository
    ```bash
-   git clone [https://github.com/Khadalicioso/login_system.git]
+   git clone https://github.com/Khadalicioso/login_system.git
    ```
 
 2. Navigate to the project directory
