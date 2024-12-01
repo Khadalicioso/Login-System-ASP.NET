@@ -82,7 +82,7 @@ The application will be available at `https://localhost:5001` or `http://localho
 ## Project Structure
 
 ```
-Practical__Login/
+login/
 ├── Controllers/         # Handle user requests and application flow
 ├── Models/             # Data models and business logic
 ├── Views/              # Razor views for UI
