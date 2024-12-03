@@ -1,30 +1,27 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
 @{
     Layout = null;
 }
-
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login Success</title>
-    <style>
-        #aa {
-            border-radius: 25px;
-            border: 2px solid red;
-            padding: 50px 125px;
-            width: 250px;
-            height: 100px;
-            color: forestgreen;
-            text-align: center;
-            font-size: 25px;
-            margin-left: 30%;
-        }
-    </style>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="~/css/success.css" rel="stylesheet">
 </head>
 <body>
-    <div id="aa">@ViewBag.message</div>
+    <div class="main-container">
+        <div class="success-container">
+            <i class="fas fa-check-circle success-icon"></i>
+            <div class="success-message">@ViewBag.message</div>
+            <a href="@Url.Action("Login", "Login")" class="btn btn-return">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Login
+            </a>
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>

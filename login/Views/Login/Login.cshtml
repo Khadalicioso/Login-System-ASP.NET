@@ -1,4 +1,4 @@
-﻿@model login.Models.UserModel;
+@model login.Models.UserModel;
 
 @{
     Layout = null;
@@ -7,65 +7,160 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Login</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        body {
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
-            background-color: #17a2b8;
-            height: 100vh;
         }
 
-        #login .container #login-row #login-column #login-box {
-            margin-top: 120px;
-            max-width: 400px;
-            height: 350px;
-            border: 1px solid #9C9C9C;
-            background-color: #EAEAEA;
+        body {
+            background: linear-gradient(135deg, #17a2b8, #0056b3);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
 
-        #login .container #login-row #login-column #login-box #login-form {
-                padding: 20px;
-            }
+        .main-container {
+            min-height: 100vh;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-        #login .container #login-row #login-column #login-box #login-form #register-link {
-            margin-top: -85px;
+        .login-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 420px;
+            margin: auto;
+            -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-header i {
+            font-size: 2rem;
+            color: #17a2b8;
+            margin-bottom: 1rem;
+        }
+
+        .login-header h2 {
+            color: #2d3748;
+            font-weight: 600;
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-header p {
+            color: #718096;
+            font-size: 0.95rem;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: #4a5568;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            border: 1.5px solid #e2e8f0;
+            font-size: 1rem;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+
+        .form-control:focus {
+            border-color: #17a2b8;
+            -webkit-box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.15);
+            box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.15);
+            outline: none;
+        }
+
+        .form-control::placeholder {
+            color: #a0aec0;
+        }
+
+        .btn-login {
+            padding: 0.75rem;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 8px;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+            width: 100%;
+            display: inline-block;
+        }
+
+        .btn-login:hover {
+            -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
+            -webkit-box-shadow: 0 4px 12px rgba(23, 162, 184, 0.15);
+            box-shadow: 0 4px 12px rgba(23, 162, 184, 0.15);
+        }
+
+        .alert {
+            border-radius: 8px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-
-    <div id="login">
-        <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
-                        @using (Html.BeginForm("Verify", "Login", FormMethod.Post))
-                        {<h3 class="text-center text-info">Login</h3>
-                            <div class="form-group">
-                                <label for="username" class="text-info">Username:</label><br>
-                                @Html.TextBoxFor(m => m.username, new { @class = "form-control", @placeholder = "Email", @required = true })
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-info">Password:</label><br>
-                                @Html.PasswordFor(m => m.password, new { @class = "form-control", @placeholder = "Password", @required = true })
-                            </div>
-                            <div class="form-group">
-                                <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
-                            </div>
-                        }
-                        <div style="color:red;">@ViewBag.message</div>
-                    </div>
+    <div class="main-container">
+        <div class="login-container">
+            @using (Html.BeginForm("Verify", "Login", FormMethod.Post))
+            {
+                <div class="login-header">
+                    <i class="fas fa-user-circle"></i>
+                    <h2>Welcome Back</h2>
+                    <p>Please sign in to your account</p>
                 </div>
-            </div>
+                <div class="form-group mb-4">
+                    <label for="username">Username</label>
+                    @Html.TextBoxFor(m => m.username, new { @class = "form-control", @placeholder = "Enter your email", @required = true })
+                </div>
+                <div class="form-group mb-4">
+                    <label for="password">Password</label>
+                    @Html.PasswordFor(m => m.password, new { @class = "form-control", @placeholder = "Enter your password", @required = true })
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info btn-login">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Sign In
+                    </button>
+                </div>
+                @if (ViewBag.message != null)
+                {
+                    <div class="alert alert-danger mt-3">
+                        <i class="fas fa-exclamation-circle mr-2"></i>@ViewBag.message
+                    </div>
+                }
+            }
         </div>
     </div>
 
-
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
