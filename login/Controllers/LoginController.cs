@@ -18,7 +18,7 @@ namespace login.Controllers
         {
             var users = new List<UserModel>
             {
-                new UserModel{id=1,username="Quezon City",password="University"},
+                new UserModel{id=1,username="hello",password="world"},
             };
 
             return users;
