@@ -70,12 +70,12 @@ This project follows the MVC (Model-View-Controller) pattern:
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/Khadalicioso/login_system.git
+   git clone https://github.com/Khadalicioso/login-system-asp.git
    ```
 
 2. Navigate to the project directory
    ```bash
-   cd login_system
+   cd login-system-asp
    ```
 
 3. Restore dependencies
@@ -115,7 +115,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-Khadalicioso
+Miguel Enrique Dasalla
 
 ---
 *This project demonstrates modern web development practices, combining secure authentication with contemporary UI/UX design principles.*
