@@ -70,12 +70,12 @@ This project follows the MVC (Model-View-Controller) pattern:
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/Khadalicioso/login-system-asp.git
+   git clone https://github.com/Khadalicioso/login-system-aspdotnet.git
    ```
 
 2. Navigate to the project directory
    ```bash
-   cd login-system-asp
+   cd login-system-aspdotnet
    ```
 
 3. Restore dependencies
