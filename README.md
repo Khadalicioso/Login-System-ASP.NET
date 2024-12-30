@@ -58,42 +58,11 @@ This project follows the MVC (Model-View-Controller) pattern:
 - Manage application flow
 - Return appropriate responses
 
-## Getting Started
-
 ### Prerequisites
 
 - .NET SDK (latest version)
 - Visual Studio 2019/2022 or VS Code
 - SQL Server (LocalDB or higher)
-
-### Installation
-
-1. Clone the repository
-   ```bash
-   git clone https://github.com/Khadalicioso/login-system-aspdotnet.git
-   ```
-
-2. Navigate to the project directory
-   ```bash
-   cd login-system-aspdotnet
-   ```
-
-3. Restore dependencies
-   ```bash
-   dotnet restore
-   ```
-
-4. Update database with migrations
-   ```bash
-   dotnet ef database update
-   ```
-
-5. Run the application
-   ```bash
-   dotnet run
-   ```
-
-The application will be available at `https://localhost:5001` or `http://localhost:5000`
 
 ## Project Structure
 
@@ -112,10 +81,3 @@ login/
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Author
-
-Miguel Enrique Dasalla
-
----
-*This project demonstrates modern web development practices, combining secure authentication with contemporary UI/UX design principles.*
